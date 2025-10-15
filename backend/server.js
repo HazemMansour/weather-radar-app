@@ -4,7 +4,16 @@ const https = require('https');
 const zlib = require('zlib');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'https://weather-radar-frontend.onrender.com',
+    'https://weather-radar-backend.onrender.com'
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
