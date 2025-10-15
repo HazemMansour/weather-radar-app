@@ -7,8 +7,8 @@ const app = express();
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://weather-radar-frontend.onrender.com',
-    'https://weather-radar-backend.onrender.com'
+    'https://weather-radar-app-frontend.onrender.com',
+    'https://weather-radar-app-backend.onrender.com'
   ],
   credentials: true,
   optionsSuccessStatus: 200
